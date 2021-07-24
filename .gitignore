@@ -87,6 +87,9 @@ logs
 # VIM temp files
 *.sw[op]
 
+#Code settings file
+.vscode
+
 # mypy
 .mypy_cache
 

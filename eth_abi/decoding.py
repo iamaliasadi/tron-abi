@@ -328,10 +328,10 @@ class FixedByteSizeDecoder(SingleDecoder):
         value_byte_size = self._get_value_byte_size()
         padding_size = self.data_byte_size - value_byte_size
 
-        if padding_bytes != b'\x00' * padding_size:
-            raise NonEmptyPaddingBytes(
-                "Padding bytes were not empty: {0}".format(repr(padding_bytes))
-            )
+        # if padding_bytes != b'\x00' * padding_size:
+        #     raise NonEmptyPaddingBytes(
+        #         "Padding bytes were not empty: {0}".format(repr(padding_bytes))
+        #     )
 
     def _get_value_byte_size(self):
         value_byte_size = self.value_bit_size // 8
